@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://picsum.photos/32/32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FECP AI Agent & Workflow Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reactflow/dist/style.css" />
+    <!-- CopilotKit CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@copilotkit/react-ui@1.0.8/dist/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              fecp: {
+                900: '#0f172a',
+                800: '#1e293b',
+                700: '#334155',
+                accent: '#3b82f6',
+                success: '#10b981',
+                warning: '#f59e0b',
+                error: '#ef4444',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      /* Custom scrollbar for dark theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; 
+      }
+
+      /* CopilotKit Dark Theme Overrides to match FECP */
+      :root {
+        --copilot-kit-primary-color: #3b82f6;
+        --copilot-kit-background-color: #1e293b;
+        --copilot-kit-response-button-background-color: #334155;
+        --copilot-kit-response-button-text-color: #ffffff;
+        --copilot-kit-muted-color: #94a3b8;
+        --copilot-kit-separator-color: #334155;
+      }
+      
+      /* Force CopilotChat to fill container */
+      .copilotKitChat {
+        height: 100% !important;
+        width: 100% !important;
+        background-color: transparent !important;
+        border: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      
+      .copilotKitMessages {
+        flex: 1 !important;
+        overflow-y: auto !important;
+      }
+
+      .copilotKitInput {
+        background-color: #0f172a !important;
+        border-color: #334155 !important;
+        color: white !important;
+      }
+      
+      /* Hide default header if we are using our own panel header */
+      .copilotKitHeader {
+        display: none !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime?deps=react@18.3.1",
+    "reactflow": "https://esm.sh/reactflow@11.10.4?deps=react@18.3.1,react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.3.1",
+    "recharts": "https://esm.sh/recharts@2.12.3?deps=react@18.3.1,react-dom@18.3.1",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.3.1,react-dom@18.3.1",
+    "@copilotkit/react-ui": "https://esm.sh/@copilotkit/react-ui@1.0.8?deps=react@18.3.1,react-dom@18.3.1",
+    "@copilotkit/react-core": "https://esm.sh/@copilotkit/react-core@1.0.8?deps=react@18.3.1,react-dom@18.3.1",
+    "@copilotkit/runtime-client-gql": "https://esm.sh/@copilotkit/runtime-client-gql@1.0.8?deps=react@18.3.1,react-dom@18.3.1",
+    "@google/genai": "https://esm.sh/@google/genai@0.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
